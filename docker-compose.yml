@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.29.2
+    ports:
+      - 9090:9090
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+
+volumes:
+  prometheus_data:
