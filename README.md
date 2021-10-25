@@ -5,10 +5,16 @@
 # java-micrometer-example
 Java Micrometer example with Prometheus and Grafana
 
-http://localhost:8080/prometheus
+Service
 
-http://localhost:9090/
+    http://localhost:8080/prometheus
 
-process_counter_total
+Prometheus
+    
+    http://localhost:9090/
+
+counter example
+    
+    counter_total
 
 
