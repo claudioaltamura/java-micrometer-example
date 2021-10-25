@@ -5,7 +5,7 @@ import io.micrometer.core.instrument.MeterRegistry;
 
 public class XYZProcessor {
 
-	public static final String METRIC_NAME = "process.counter";
+	public static final String METRIC_NAME = "process_counter";
 
 	private final MeterRegistry meterRegistry;
 
