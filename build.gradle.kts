@@ -18,10 +18,8 @@ dependencies {
 
     testImplementation("org.assertj:assertj-core:3.22.0")
 
-    // Use JUnit Jupiter API for testing.
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
 
-    // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
 
