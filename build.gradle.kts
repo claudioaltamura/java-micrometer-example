@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.diffplug.spotless") version "6.5.0"
+    id("com.diffplug.spotless") version "6.5.2"
     id("com.github.ben-manes.versions") version "0.42.0"
 }
 
@@ -14,7 +14,7 @@ dependencies {
 
     implementation("io.micrometer:micrometer-registry-prometheus:1.8.5")
 
-    implementation ("io.projectreactor.netty:reactor-netty-http:1.0.18")
+    implementation ("io.projectreactor.netty:reactor-netty-http:1.0.19")
 
     testImplementation("org.assertj:assertj-core:3.22.0")
 
