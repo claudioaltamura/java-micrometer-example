@@ -7,11 +7,11 @@ Java Micrometer example with Prometheus
 
 Service
 
-    http://localhost:8080/prometheus
+http://localhost:8080/prometheus
 
 Prometheus
     
-    http://localhost:9090/
+http://localhost:9090/
 
 counter example
     
