@@ -14,12 +14,9 @@ public class Example {
     Counter counter = meterRegistry.counter("counter", key, "mycounter");
 
     Flux.interval(Duration.ofMillis(30))
-        .doOnEach(
-            d -> {
-              int random = (int) (Math.random() * 10000);
-              counter.increment(random);
-            })
+        .take(1000) // 30 seconds worth of emissions (1000 * 30ms)
+        .doOnEach(d -> counter.increment())
         .log()
         .blockLast();
-  }
+      }
 }
