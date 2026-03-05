@@ -1,29 +1,42 @@
 plugins {
     java
-    id("com.diffplug.spotless") version "6.5.2"
-    id("com.github.ben-manes.versions") version "0.42.0"
+    id("com.diffplug.spotless") version "8.0.0"
+    id("com.github.ben-manes.versions") version "0.53.0"
 }
 
 repositories {
-
     mavenCentral()
 }
 
-dependencies {
-    implementation("io.micrometer:micrometer-core:1.8.5")
-
-    implementation("io.micrometer:micrometer-registry-prometheus:1.8.5")
-
-    implementation ("io.projectreactor.netty:reactor-netty-http:1.0.19")
-
-    testImplementation("org.assertj:assertj-core:3.22.0")
-
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
+    }
 }
 
-tasks.test {
-    // Use junit platform for unit tests.
+dependencies {
+    implementation("io.micrometer:micrometer-core:1.16.3")
+
+    implementation("io.micrometer:micrometer-registry-prometheus:1.12.0")
+
+    implementation("io.projectreactor.netty:reactor-netty-http:1.3.3")
+
+    testImplementation("org.assertj:assertj-core:3.27.7")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:6.0.2")
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:6.0.2")
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
+    kotlinGradle {
+        ktlint()
+    }
+}
+
+tasks.named<Test>("test") {
     useJUnitPlatform()
 }

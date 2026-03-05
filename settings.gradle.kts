@@ -8,4 +8,3 @@
  */
 
 rootProject.name = "java-micrometer-example"
-include("app")
