@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.com/claudioaltamura/java-micrometer-example.svg?branch=master)](https://travis-ci.org/claudioaltamura/java-micrometer-example)
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/claudioaltamura/java-micrometer-example/build-gradle-project.yml?branch=main)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # java-micrometer-example
-Java Micrometer example with Prometheus and Grafana
+Java Micrometer example with Prometheus
 
 Service
 
